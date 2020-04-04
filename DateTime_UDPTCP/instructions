@@ -1,0 +1,60 @@
+Assignment #2 CS 3357a Fall 2019
+
+Due Oct 25th, 2019 11:59pm
+
+Overview
+
+In this assignment you will create a networked date/time server and a client to access the server. 
+You will need to write two complete sets of applications, the first will use the TCP protocol and the second will use UDP. 
+
+The basic interaction between the client and server should be as follows:
+
+    Server listens for incoming client requests.
+    Client connects (only for TCP) to server and sends ASCII request “What is the current date and time?”
+    Server responds with the current date and time in the format  “Current Date and Time – 09/29/2019 09:00:01”
+    Client closes connection (only for TCP), server stays running listening for next connection
+
+Detailed Requirements
+
+Server
+
+    Only required to handle one client interaction at a time
+    Can listen on any port you choose
+    Must respond to invalid requests with an error message
+    Valid request is “What is the current date and time?”
+    Response to valid request must be in the format:
+    “Current Date and Time – MM/DD/YYYY hh:mm:ss”
+
+Client
+
+    Allows user to enter text commands to be sent to the server
+    Displays response back from server
+
+
+Procedure
+
+Part A – Develop your Applications
+
+Using the information above, design and implement your applications using Python. (Please use Python 3)
+
+Important - You will be developing 4 applications in total (Client/Server using TCP and Client/Server using UDP)
+
+You will be graded on the following:
+
+    Design and function of your applications
+    Documentation within your applications (Yes, it is important. No one wants to work on undocumented apps)
+
+Part B – “Sniff” Request/Response between Server and Client apps
+
+Using Wireshark, capture the traffic between your client and server applications and take a screen shot of the TCP packet showing the response back from the server. Repeat the same procedure showing the UDP exchange.The response will contain the Date/Time data, below is an example for the TCP application:
+
+Important - As we did in assignment #1 you will need to run your Server and Client apps on the same machine using the loopback adapter address of 127.0.0.1.
+
+What to Submit
+
+You will be submitting the following via OWL :
+
+    4 Files - Server_TCP.py, Client_TCP.py, Server_UDP.py, and Client_UDP.py 
+    Two screen captures for Part B showing
+        A valid request/response for your TCP applications
+        A valid request/response for your UDP applications
